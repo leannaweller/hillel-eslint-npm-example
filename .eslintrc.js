@@ -1,30 +1,17 @@
 module.exports = {
-	'env': {
-		'browser': true,
-		'es2021': true
-	},
-	'extends': 'eslint:recommended',
-	'parserOptions': {
-		'ecmaVersion': 12,
-		'sourceType': 'module'
-	},
-	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'unix'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'always'
-		],
-		'no-console': 'warn'
-	}
+  extends: ['prettier', 'airbnb'],
+  plugins: ['prettier'],
+  env: {
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+  },
+  rules: {
+    'prettier/prettier': 2,
+    semi: 2,
+    'prefer-const': 2,
+    'no-underscore-dangle': 2,
+  },
 };
